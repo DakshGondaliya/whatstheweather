@@ -1,0 +1,108 @@
+@font-face {
+  src: url(./font/GoogleSans-Regular.ttf);
+  font-family: "GoogleSans-Regular";
+}
+
+@font-face {
+  src: url(./font/GoogleSans-Medium.ttf);
+  font-family: "GoogleSans-Medium";
+}
+
+body {
+  margin: 0;
+  background-color: #f5f8ff;
+}
+
+.vertical-margin {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.mat-toolbar {
+  background: #4f6df6 !important;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+  z-index: 20;
+}
+
+.mat-caption {
+  position: relative;
+  font-size: 1.2em !important;
+  margin-top: 1em;
+}
+
+.mat-headline {
+  font: 400 24px/32px "GoogleSans-Regular", Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-subheading-2 {
+  font: 400 16px/28px "GoogleSans-Regular", Roboto, "Helvetica Neue", sans-serif;
+  margin: 0 0 16px;
+}
+
+.mat-display-3 {
+  font: 400 56px/56px "GoogleSans-Regular", Roboto, "Helvetica Neue", sans-serif;
+}
+
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  transition: all 0.5s ease-in-out;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+mat-card {
+  box-shadow: 0 0 2rem rgba(0, 0, 255, 0.1) !important;
+  border-radius: 10px !important;
+  justify-items: center;
+  padding: 2rem;
+  margin: 2rem;
+  background-color: white;
+  -webkit-animation: fadein 1.25s ease-in-out 0ms 1;
+  animation: fadein 1.25s ease-in-out 0ms 1;
+  transition: all 0.5s ease-in-out;
+}
+
+.mat-caption {
+  font: 400 16px/20px "GoogleSans-Regular", Roboto, "Helvetica Neue", sans-serif;
+}
+
+mat-toolbar span {
+  letter-spacing: 0.3175px;
+  word-spacing: 0px;
+}
+
+@media screen and (max-width: 1160px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 10px;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    grid-gap: 5px;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+@media screen and (max-width: 664px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, 1fr);
+    transition: all 0.5s ease-in-out;
+  }
+}
